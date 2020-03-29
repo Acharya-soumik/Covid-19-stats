@@ -2,8 +2,7 @@ import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import Home from "../Components/Home";
 import Contact from "../Components/Contact";
-import Hospital from "../Components/Hospital";
-import TotalTest from "../Components/TotalTest";
+import Patient from "../Components/Patient";
 
 function Routes() {
   return (
@@ -31,13 +30,8 @@ function Routes() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/totaltests" className="text-dark nav-link">
-                total Test
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/hospital" className="text-dark nav-link">
-                hospitals and beds
+              <Link to="/patients" className="text-dark nav-link">
+                Patients
               </Link>
             </li>
             <li className="nav-item">
@@ -50,8 +44,7 @@ function Routes() {
       </nav>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/totaltests" component={TotalTest} />
-        <Route exact path="/hospital" component={Hospital} />
+        <Route exact path="/patients" component={Patient} />
         <Route exact path="/contacts" component={Contact} />
       </Switch>
     </div>
